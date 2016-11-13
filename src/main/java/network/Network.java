@@ -16,6 +16,10 @@ public class Network {
         layers.set(index, networkLayer);
     }
 
+    public NetworkLayer getLayer(int index) {
+        return this.layers.get(index);
+    }
+
     public List<NetworkLayer> getNetworkLayers() {
         return this.layers;
     }
