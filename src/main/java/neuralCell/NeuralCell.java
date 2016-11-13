@@ -25,7 +25,6 @@ public class NeuralCell implements NeuralCellInterface {
         for (int i =0; i < getInputSize(); i++) {
           outputValue += inputs.get(i) * weights.get(i);
         }
-
         return outputValue;
     }
 
