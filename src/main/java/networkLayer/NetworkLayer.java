@@ -27,5 +27,7 @@ public class NetworkLayer {
         return this.neuralCells;
     }
 
-
+    public int getLayerSize() {
+        return neuralCells.size();
+    }
 }
