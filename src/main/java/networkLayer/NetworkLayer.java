@@ -10,11 +10,11 @@ public class NetworkLayer {
 
 
     //neuralCellsInput - number of neural cell inputs
-    public NetworkLayer(int cellsNumber, int neuralCellsInput) {
+    public NetworkLayer(int cellsNumber, int cellsInputNumber) {
         this.neuralCells = new ArrayList<NeuralCell>(cellsNumber);
 
         for (int i = 0; i< cellsNumber; i++) {
-            neuralCells.set(i, new NeuralCell(neuralCellsInput));
+            neuralCells.set(i, new NeuralCell(cellsInputNumber));
         }
     }
 
