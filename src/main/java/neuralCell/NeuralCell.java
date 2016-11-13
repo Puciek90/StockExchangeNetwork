@@ -32,5 +32,33 @@ public class NeuralCell implements NeuralCellInterface {
         return inputs.size();
     }
 
+    //todo: exception or if-control?
+    public void setWeigth(int index, double weigh) {
+        this.weights.set(index, weigh);
+    }
 
+    //todo: exception or if-control?
+    public double getWeigh(int index){
+        return this.weights.get(index);
+    }
+
+    public List<Double> getWeighs(){
+        return this.weights;
+    }
+
+
+    //todo: exception or if-control?
+    public double setInput(int index, double input) throws IndexOutOfBoundsException{
+        return this.inputs.set(index, input);
+    }
+
+
+    //todo: exception or if-control?
+    public double getInput(int index) throws IndexOutOfBoundsException{
+        return this.inputs.get(index);
+    }
+
+    public List<Double> getInputs(){
+        return this.inputs;
+    }
 }
