@@ -20,7 +20,9 @@ public class App
          */
         Network network = new Network(3);
         network.setNetworkLayer(0, new NetworkLayer(4,1));
-        network.setNetworkLayer(0, new NetworkLayer(4,network.getLayer(0).getLayerSize()));
-        network.setNetworkLayer(0, new NetworkLayer(1,network.getLayer(1).getLayerSize()));
+        network.setNetworkLayer(1, new NetworkLayer(4,network.getLayer(0).getLayerSize()));
+        network.setNetworkLayer(2, new NetworkLayer(1,network.getLayer(1).getLayerSize()));
+
+
     }
 }

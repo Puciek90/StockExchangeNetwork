@@ -15,7 +15,7 @@ public class NeuralCell implements NeuralCellInterface {
 
         //set random weighs
         for (int i =0; i< inputNumber; i++) {
-            weights.set(i, new Random().nextDouble());
+            weights.add(i, new Random().nextDouble());
         }
     }
 

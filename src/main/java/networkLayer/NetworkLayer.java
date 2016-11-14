@@ -14,7 +14,7 @@ public class NetworkLayer {
         this.neuralCells = new ArrayList<NeuralCell>(cellsNumber);
 
         for (int i = 0; i< cellsNumber; i++) {
-            neuralCells.set(i, new NeuralCell(cellsInputNumber));
+            neuralCells.add(i, new NeuralCell(cellsInputNumber));
         }
     }
 

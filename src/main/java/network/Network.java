@@ -13,7 +13,7 @@ public class Network {
     }
 
     public void setNetworkLayer(int index, NetworkLayer networkLayer) {
-        layers.set(index, networkLayer);
+        layers.add(index, networkLayer);
     }
 
     public NetworkLayer getLayer(int index) {
