@@ -23,4 +23,23 @@ public class Network {
     public List<NetworkLayer> getNetworkLayers() {
         return this.layers;
     }
+
+    public void initializeNetwork(List<Double> inputs) {
+
+        //todo: check if the size of the inputs is equal to layer inputs.
+
+        for (int k = 0; k<layers.size(); k++) {
+            if (k == 0) {
+                for (int i = 0; i < layers.get(k).getNeuralCells().size(); i++) {
+                    layers.get(k).getNeuralCell(i).addInput(inputs.get(i));
+                }
+            } else {
+                for (int i = 0; i < layers.get(k).getNeuralCells().size(); i++) {
+                    for (int j = 0; j < layers.get(k-1).getNeuralCell(0).getInputs().size(); j++)
+                        layers.get(k).getNeuralCell(i).addInput(j, layers.get(k-1).getNeuralCell(j).calculateOutput());
+                }
+            }
+
+        }
+    }
 }
