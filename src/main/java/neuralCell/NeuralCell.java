@@ -34,9 +34,9 @@ public class NeuralCell implements NeuralCellInterface {
         return inputs.size();
     }
 
-    //todo: exception or if-control?
-    public void setWeigth(int index, double weigh) {
-        this.weights.set(index, weigh);
+    //todo: exception or if-control?gi
+    public void addWeigth(int index, double weigh) {
+        this.weights.add(index, weigh);
     }
 
     //todo: exception or if-control?
