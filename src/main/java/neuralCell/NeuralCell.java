@@ -50,8 +50,8 @@ public class NeuralCell implements NeuralCellInterface {
 
 
     //todo: exception or if-control?
-    public double setInput(int index, double input) throws IndexOutOfBoundsException{
-        return this.inputs.set(index, input);
+    public void addInput(int index, double input) throws IndexOutOfBoundsException{
+            this.inputs.add(index, input);
     }
 
 
