@@ -26,17 +26,20 @@ public class Network {
 
     public void initializeNetwork(List<Double> inputs) {
 
-        //todo: check if the size of the inputs is equal to layer inputs.
+        //todo: Refactor this -> GUI
+        if (inputs.size() != layers.size()) System.out.println("You can not initialize network with this data (different input and network size)");
 
-        for (int k = 0; k < layers.size(); k++) {
-            if (k == 0) {
-                for (int i = 0; i < layers.get(k).getNeuralCells().size(); i++) {
-                    layers.get(k).getNeuralCell(i).addInput(inputs.get(i));
-                }
-            } else {
-                for (int i = 0; i < layers.get(k).getNeuralCells().size(); i++) {
-                    for (int j = 0; j < layers.get(k - 1).getNeuralCell(0).getInputs().size(); j++)
-                        layers.get(k).getNeuralCell(i).addInput(j, layers.get(k - 1).getNeuralCell(j).calculateOutput());
+        else {
+            for (int k = 0; k < layers.size(); k++) {
+                if (k == 0) {
+                    for (int i = 0; i < layers.get(k).getNeuralCells().size(); i++) {
+                        layers.get(k).getNeuralCell(i).addInput(inputs.get(i));
+                    }
+                } else {
+                    for (int i = 0; i < layers.get(k).getNeuralCells().size(); i++) {
+                        for (int j = 0; j < layers.get(k - 1).getNeuralCell(0).getInputs().size(); j++)
+                            layers.get(k).getNeuralCell(i).addInput(j, layers.get(k - 1).getNeuralCell(j).calculateOutput());
+                    }
                 }
             }
         }
